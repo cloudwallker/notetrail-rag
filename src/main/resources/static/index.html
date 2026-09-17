@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>NoteTrail · 有出处的知识问答</title><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script></head>
+<body><header><div class="brand">Note<span>Trail</span> / Lab</div><span class="badge">KNOWLEDGE · EVIDENCE · ANSWERS</span></header><main>
+<section class="intro"><div><div class="eyebrow">RETRIEVAL LABORATORY</div><h1>每一次回答，都能找到出处。</h1><p>导入笔记，查看检索证据，理解一次可追溯的知识问答。</p></div><span class="pill">默认本地摘录 · 无需模型密钥</span></section>
+<div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+<div class="grid"><div class="stack"><section class="panel"><div class="panel-title"><h2>导入文档</h2><button id="sample" class="secondary">填入示例笔记</button></div>
+<label for="title">文档标题</label><input id="title" maxlength="100" placeholder="例如：Java 虚拟线程学习笔记">
+<label for="file">或读取本地 TXT / Markdown</label><input id="file" class="file" type="file" accept=".txt,.md,text/plain,text/markdown">
+<label for="text">文档正文</label><textarea id="text" rows="10" placeholder="粘贴你自己的学习笔记……"></textarea><div class="toolbar"><button id="import" class="primary">导入并分块</button></div><p class="hint">按 500 个 Unicode 码点分块，重叠 80 个码点；标题、文档和片段会保存在本地数据库。</p></section>
+<section class="panel"><div class="panel-title"><h2>我的文档</h2><button id="refresh" class="secondary">刷新</button></div><div id="documents" class="list"><div class="empty">先导入一篇笔记</div></div></section></div>
+<div class="stack"><section class="panel"><h2>向你的资料提问</h2><label for="question">问题或检索词</label><textarea id="question" rows="3" placeholder="例如：虚拟线程适合什么场景？"></textarea><div class="inline"><div class="toolbar"><button id="ask" class="primary">生成带出处的回答</button><button id="search" class="secondary">仅查看检索证据</button></div><div class="small"><label for="top-k">Top K</label><input id="top-k" type="number" min="1" max="10" value="3"></div></div><p class="hint">中文与英文 BM25 检索。默认回答直接摘录原文；配置模型后才会调用真实生成服务。</p>
+<hr class="divider"><div class="panel-title"><h3>回答</h3><span id="mode" class="status">READY</span></div><div id="answer" class="answer">先导入资料，再提出一个问题。没有检索证据时，会明确提示资料不足。</div><div id="evidence" class="list"></div></section>
+<section class="panel"><h2>问答历史</h2><p class="hint">保存回答及当时的引用快照。历史引用不代表文档仍存在于当前知识库。</p><div id="history" class="list"><div class="empty">尚无问答记录</div></div></section></div></div>
+<footer>NoteTrail RAG · 本地单用户学习实验室 · 默认摘录回答不等于大模型生成</footer></main></body></html>
+
