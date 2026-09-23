@@ -1,0 +1,22 @@
+@base = http://127.0.0.1:18082
+
+### 导入示例
+POST {{base}}/api/documents
+Content-Type: application/json
+
+< java-notes.json
+
+### 查看检索证据
+POST {{base}}/api/search
+Content-Type: application/json
+
+{"query":"虚拟线程","topK":3}
+
+### 提问
+POST {{base}}/api/questions
+Content-Type: application/json
+
+< question.json
+
+### 问答历史
+GET {{base}}/api/questions
