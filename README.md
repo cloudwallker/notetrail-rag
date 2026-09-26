@@ -1,14 +1,18 @@
 # NoteTrail RAG
 
-**中文简介：** 基于 Java 21 的知识库学习应用，支持 Unicode 文本分块、中英文 BM25 检索、带来源的回答和持久化问答历史。默认离线摘录回答，可选接入兼容 OpenAI 协议的模型服务。
+### Local note search and answers with traceable sources
 
-**English:** A Java 21 knowledge-base application with Unicode text chunking, Chinese/English BM25 retrieval, source-backed answers, and persistent question history. Local extractive answers work offline; an OpenAI-compatible model endpoint is optional.
+**Import text notes, find relevant Chinese or English passages with BM25, and review answers alongside their sources. Keep documents, citation snapshots, and question history across restarts.**
 
-Windows 可双击根目录 `start.bat`：自动查找 Java 21+。服务就绪后自动打开浏览器；保持终端窗口打开，按 Ctrl+C 停止服务。再次双击会打开已运行的同名服务。缺少 JAR 时会提示先构建；启动失败保留错误信息。`start.bat -Check` 仅检查启动环境。
+Default answers are offline extracts and need no model key. Model generation requires a configured compatible endpoint; vector search is not included.
 
-**每一次回答，都能找到出处。** 一个独立实现的 Java 21 知识库学习项目，覆盖文本导入、Unicode 分块、中文/英文 BM25 检索、带来源的回答和问答历史。
+**导入文本笔记，用 BM25 检索相关中英文片段，对照来源查看回答；文档、引用快照和问答历史在重启后仍然保留。**
 
 默认使用**本地摘录回答**，无需模型密钥；配置兼容接口后才能调用真实模型生成。摘录模式不是大模型，也不宣称向量语义检索。
+
+[Run locally / 本地运行](#运行) · [API](docs/api.md) · [Design / 设计说明](docs/design.md)
+
+Windows 可双击根目录 `start.bat`：自动查找 Java 21+。服务就绪后自动打开浏览器；保持终端窗口打开，按 Ctrl+C 停止服务。再次双击会打开已运行的同名服务。缺少 JAR 时会提示先构建；启动失败保留错误信息。`start.bat -Check` 仅检查启动环境。
 
 ## 运行
 
