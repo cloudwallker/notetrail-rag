@@ -97,7 +97,12 @@ Invoke-RestMethod "$base/api/questions" -Method Post -ContentType 'application/j
 
 ```sh
 mvn clean package
+python scripts/collect_licenses.py --check
 ```
+
+许可证检查将已记录的全部运行时依赖及其许可证、声明原始字节与构建后的 JAR 对比。Git 保留 `licenses/` 中的原始换行，不进行转换。
+
+The license check compares every recorded runtime dependency and its original license/notice bytes with the built JAR. Git preserves `licenses/` without changing line endings.
 
 构建后可按上文启动服务，运行 `examples/api.http` 或 PowerShell API 示例。
 
