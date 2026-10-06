@@ -44,9 +44,11 @@ async function loadDocuments() {
   }
 }
 async function action(work) {
+  $('operation-status').hidden = false;
+  document.querySelector('main').setAttribute('aria-busy', 'true');
   const buttons = [...document.querySelectorAll('button')]; buttons.forEach(button => button.disabled = true);
   try { await work(); } catch (error) { notice(error.message, true); }
-  finally { buttons.forEach(button => button.disabled = false); }
+  finally { $('operation-status').hidden = true; document.querySelector('main').setAttribute('aria-busy', 'false'); buttons.forEach(button => button.disabled = false); }
 }
 $('sample').addEventListener('click', () => { $('title').value = sample.title; $('text').value = sample.text; $('question').value = '虚拟线程适合什么场景'; });
 $('file').addEventListener('change', () => action(async () => {

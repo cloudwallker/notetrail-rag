@@ -113,3 +113,9 @@ The license check compares every recorded runtime dependency and its original li
 初始实现由 AI 编程助手协助完成。学习展示可以围绕分块取舍、检索质量、引用溯源和模型异常处理展开。后续适合增加有评测集支撑的 embedding 检索与混合召回，再比较质量与成本；这些尚未实现。
 
 代码使用 [MIT](LICENSE)，运行时依赖保留各自许可，见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
+
+## Interface / 界面体验
+
+A local note retrieval and evidence workspace with readable source excerpts, clear operation feedback, keyboard navigation, and desktop and mobile layouts.
+
+本地笔记检索与证据工作台，提供易读的来源片段、明确的操作反馈、键盘导航和桌面及手机布局。
