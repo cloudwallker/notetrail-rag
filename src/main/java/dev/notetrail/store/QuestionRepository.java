@@ -64,7 +64,7 @@ public class QuestionRepository {
         """
         SELECT id, question, answer, mode, created_at
         FROM questions
-        ORDER BY created_at DESC, id DESC
+        ORDER BY CAST(created_at AS TIMESTAMP(9) WITH TIME ZONE) DESC, id DESC
         LIMIT 50
         """,
         (resultSet, rowNumber) -> {
