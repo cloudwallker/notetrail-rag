@@ -48,6 +48,10 @@ superpowers/
 **/superpowers/
 **/tests/
 **/test/
+!/src/test/
+/src/test/**
+!/src/test/**/
+!/src/test/java/dev/notetrail/store/QuestionRepositoryTest.java
 /.github/
 /benchmarks/
 /artifacts/

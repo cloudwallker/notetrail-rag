@@ -2,11 +2,11 @@
 
 ### Local note search and answers with traceable sources
 
-**Import text notes, find relevant Chinese or English passages with BM25, and review answers alongside their sources. Keep documents, citation snapshots, and question history across restarts.**
+**Import text notes, find relevant Chinese or English passages with BM25, and review answers alongside their sources. Keep documents, citation snapshots, and question history across restarts. History shows the latest 50 questions in timestamp order, newest first, with nanosecond precision.**
 
 Answers default to offline extracts from retrieved passages, with no model key required. Configure a compatible endpoint to generate model answers from the same retrieval evidence.
 
-**导入文本笔记，用 BM25 检索相关中英文片段，对照来源查看回答；文档、引用快照和问答历史在重启后仍然保留。**
+**导入文本笔记，用 BM25 检索相关中英文片段，对照来源查看回答；文档、引用快照和问答历史在重启后仍然保留。历史按实际时间倒序展示最近 50 条问答，保留纳秒精度。**
 
 默认从检索片段生成**本地摘录回答**，无需模型密钥；配置兼容接口后，可基于同一份检索证据调用模型生成回答。
 
